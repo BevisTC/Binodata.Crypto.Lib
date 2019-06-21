@@ -39,7 +39,7 @@ namespace Binodata.Crypto.Lib
 
             symmetricAlgorithm.Key = Encoding.ASCII.GetBytes(this.Key);
             symmetricAlgorithm.IV =  Encoding.ASCII.GetBytes(this.IV);
-
+            symmetricAlgorithm.Padding = PaddingMode.PKCS7;
             using (MemoryStream ms = new MemoryStream())
             {
                 using (CryptoStream cs = new CryptoStream(ms, symmetricAlgorithm.CreateDecryptor(), CryptoStreamMode.Write))
@@ -58,7 +58,7 @@ namespace Binodata.Crypto.Lib
 
             symmetricAlgorithm.Key = Encoding.ASCII.GetBytes(this.Key);
             symmetricAlgorithm.IV = Encoding.ASCII.GetBytes(this.IV);
-            symmetricAlgorithm.Padding = PaddingMode.None;
+            symmetricAlgorithm.Padding = PaddingMode.PKCS7;
             using (MemoryStream ms = new MemoryStream())
             {
                 using (CryptoStream cs = new CryptoStream(ms, symmetricAlgorithm.CreateEncryptor(), CryptoStreamMode.Write))
