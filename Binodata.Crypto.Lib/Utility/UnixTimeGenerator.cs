@@ -14,7 +14,7 @@ namespace Binodata.Crypto.Lib.Utility
 		public static long GetExpiredUtc0UnixTime(double addMinutes)
         {
 
-            return (long)(DateTime.UtcNow.AddMinutes(addMinutes).ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).ToUniversalTime())).TotalSeconds;
+            return (long)(DateTime.UtcNow.AddMinutes(addMinutes).ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalSeconds;
         }
 
         /// <summary>
