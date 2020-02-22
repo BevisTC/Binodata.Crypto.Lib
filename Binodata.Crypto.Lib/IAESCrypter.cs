@@ -9,7 +9,7 @@ namespace Binodata.Crypto.Lib
         string Encrypt(string plainText);
 
         string Decrypt(string cypherText);
-
+        
         void SetKey(string key);
 
         void SetIV(string iv);

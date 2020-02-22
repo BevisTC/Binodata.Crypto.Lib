@@ -12,10 +12,6 @@ namespace Binodata.Crypto.Lib
         private string Key;
         private string IV;
 
-        public LocalMachineAESCrypter()
-        {
-
-        }
 
         public LocalMachineAESCrypter(string key, string iv)
         {

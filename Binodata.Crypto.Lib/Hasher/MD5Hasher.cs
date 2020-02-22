@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using Binodata.Crypto.Lib.Hasher;
 
-namespace Binodata.Crypto.Lib.UseCases
+namespace Binodata.Crypto.Lib.Hasher
 {
-    public class MD5Hasher
+    public class MD5Hasher : IHasher
     {
         /// <summary>
         /// MD5 Hash
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public static string Hash(string text)
+        public string Hash(string text)
         {
             using (var md5 = new MD5CryptoServiceProvider())
             {
@@ -26,4 +27,6 @@ namespace Binodata.Crypto.Lib.UseCases
             }
         }
     }
+
+    
 }
