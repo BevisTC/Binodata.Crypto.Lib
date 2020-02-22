@@ -1,4 +1,4 @@
-﻿namespace Binodata.Crypto.Lib.UseCases
+﻿namespace Binodata.Crypto.Lib.Hasher
 {
     public interface IHasher
     {
